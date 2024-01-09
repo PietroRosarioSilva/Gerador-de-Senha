@@ -16,11 +16,24 @@ slider.oninput = function(){
     sizePassword.innerHTML =this.value;
 }
 
-function generatePassword(){
-
-    let pass= ""
-    for(let i = 0, n = charset.length; i < sliderElement.value; ++i){
+function generatePassword() {
+    let pass = "";
+    for (let i = 0, n = charset.length; i < sliderElement.value; ++i) {
         pass += charset.charAt(Math.floor(Math.random() * n));
     }
-    console.log(pass);
+
+    containerPassword.classList.remove("hide");
+    password.innerHTML = pass;
+    novaSenha = pass;
+}
+
+function copyPassword() {
+    const textarea = document.createElement('textarea');
+    textarea.value = novaSenha;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+
+    alert("Senha copiada com sucesso!");
 }
