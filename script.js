@@ -9,3 +9,9 @@ let containerPassword = document.querySelector("#container-password")
 
 let chaset = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#";
 let novaSenha = "";
+
+sizePassword.innerHTML = sliderElement.value
+
+slider.oninput = function(){
+    sizePassword.innerHTML =this.value;
+}
