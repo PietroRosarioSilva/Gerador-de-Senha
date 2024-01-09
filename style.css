@@ -62,4 +62,8 @@ body {
 }
 .title{
     text-align: center;
+    color: #fff;
+    font-size: 28px;
+    margin-top: 24px ;
+    margin-bottom: 8px;
 }
