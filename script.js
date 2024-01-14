@@ -35,5 +35,6 @@ function copyPassword() {
     document.execCommand('copy');
     document.body.removeChild(textarea);
 
-    alert("Senha copiada com sucesso!");
+    alert("Senha copiada com sucesso");
+    
 }
